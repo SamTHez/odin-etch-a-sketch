@@ -1,0 +1,80 @@
+@font-face {
+    font-family: tungsten;
+    src: url(/assets/tungsten-font/Tungsten-Bold/Tungsten-Bold.ttf);
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #3c3a4c;
+    
+}
+
+#headerBar {
+    background-color: #f94555;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 0;
+}
+
+#siteTitle {
+    padding: 10px 40px;
+    margin: 0;
+    font-family: "tungsten";
+    font-size: 50px;
+    color: #3c3a4c;
+}
+
+#testButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 50px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #3c3a4c;
+    background-color: #f94555;
+    font-family: "tungsten";
+    font-size: 30px;
+    color: #3c3a4c;
+}
+
+#testButton:hover {
+    background-color: #ee2f3f;
+}
+
+#testButton:active {
+    background-color: #b61926;
+}
+
+#drawWindow {
+    height: 80vh;
+    width: 80vh;
+    margin: 20px auto;
+    border-style: solid;
+    border-width: 8px 20px;
+    border-color: #f94555;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.gridRow {
+    display: flex;
+    flex: 1;
+}
+
+.gridBox {
+    flex: 1;
+    background-color: white;
+}
+
+.gridBox:hover {
+    background-color: #20202001;
+}
