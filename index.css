@@ -14,30 +14,54 @@ body {
 }
 
 #headerBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f94555;
     width: 100%;
     margin: 0;
-    position: relative;
     top: 0;
 }
 
 #siteTitle {
     padding: 10px 40px;
     margin: 0;
+    width: 25%;
     font-family: "tungsten";
     font-size: 50px;
     color: #3c3a4c;
 }
 
-#testButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px 50px;
-    margin: 10px;
+#inputField {
+    display: inline-flex;
+    align-items: stretch;
+    padding: 10px;
+    margin: 0 50px;
+}
+
+#sizeInput {
+    flex: 1;
+    padding: 10px;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-radius: 20px 0 0 20px;
+    border-color: #3c3a4c;
+    background-color: #f8acb2;
+    font-family: "tungsten";
+    font-size: 30px;
+    text-align: center;
+    color: #3c3a4c;
+}
+
+#sizeInput:focus {
+    outline: none;
+}
+
+#generateButton {
+    flex: 1;
     border-style: solid;
     border-width: 4px;
-    border-radius: 10px;
+    border-radius: 0 20px 20px 0;
     border-color: #3c3a4c;
     background-color: #f94555;
     font-family: "tungsten";
@@ -45,17 +69,31 @@ body {
     color: #3c3a4c;
 }
 
-#testButton:hover {
+#generateButton:hover, #clearButton:hover {
     background-color: #ee2f3f;
 }
 
-#testButton:active {
+#generateButton:active, #clearButton:active {
     background-color: #b61926;
 }
 
+#clearButton {
+    flex: 1;
+    padding: 10px;
+    margin: 0 30px 0 80px;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 20px;
+    border-color: #3c3a4c;
+    background-color: #f94555;
+    font-family: "tungsten";
+    font-size: 30px;
+    color: #3c3a4c;
+}
+
 #drawWindow {
-    height: 80vh;
-    width: 80vh;
+    height: 75vh;
+    width: 75vh;
     margin: 20px auto;
     border-style: solid;
     border-width: 8px 20px;
@@ -72,9 +110,9 @@ body {
 
 .gridBox {
     flex: 1;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .gridBox:hover {
-    background-color: #20202001;
+    background-color: #202020;
 }
