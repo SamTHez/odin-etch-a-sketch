@@ -5,6 +5,20 @@
 
 :root {
     box-sizing: border-box;
+
+    /*Colors for the color selection*/
+    --c1: #000000;
+    --c2: #454545;
+    --c3: #757575;
+    --c4: #AAFF00;
+    --c5: #FFFF00;
+    --c6: #FF9500;
+    --c7: #00FF15;
+    --c8: #00FFFF;
+    --c9: #0095FF;
+    --c10: #FF0040;
+    --c11: #FF00FF;
+    --c12: #6A00FF;
 }
 
 body {
@@ -91,6 +105,132 @@ body {
     color: #3c3a4c;
 }
 
+#colorSelection {
+    position: absolute;
+    height: auto;
+    width: 40vh;
+    margin: 20px auto;
+    top: 15%;
+    left: 3%;
+}
+
+#colorHeading {
+    background-color: #f94555;
+    padding: 2vh 0;
+    border-radius: 10px;
+    font-family: "tungsten";
+    font-size: 30px;
+    text-align: center;;
+    color: #3c3a4c
+}
+
+#colorGrid {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 12vh);
+    grid-template-rows: repeat(4, 12vh);
+    gap: 2vh;
+}
+
+.colorOption {
+    border-style: solid;
+    width: auto;
+    border-radius: 3vh;
+    border-width: 1.5vh;
+    border-color: #f94555;
+}
+
+.colorOption:hover {
+    border-width: 1vh;
+}
+
+.colorOption:active {
+    border-width: 2vh;
+}
+
+.activeColor {
+    border-color: #f8acb2;
+}
+
+#c1 {
+   background-color: var(--c1);
+}
+
+#c2 {
+    background-color: var(--c2);
+}
+
+#c3 {
+    background-color: var(--c3);
+}
+
+#c4 {
+    background-color: var(--c4);
+}
+
+#c5 {
+    background-color: var(--c5);
+}
+
+#c6 {
+    background-color: var(--c6);
+}
+
+#c7 {
+    background-color: var(--c7);
+}
+
+#c8 {
+    background-color: var(--c8);
+}
+
+#c9 {
+    background-color: var(--c9);
+}
+
+#c10 {
+    background-color: var(--c10);
+}
+
+#c11 {
+    background-color: var(--c11);
+}
+
+#c12 {
+    background-color: var(--c12);
+}
+
+#toolSelection {
+    position: absolute;
+    height: auto;
+    width: 40vh;
+    margin: 20px auto;
+    top: 15%;
+    right: 3%;
+}
+
+#toolHeading {
+    background-color: #f94555;
+    padding: 2vh 0;
+    border-radius: 10px;
+    font-family: "tungsten";
+    font-size: 30px;
+    text-align: center;;
+    color: #3c3a4c
+}
+
+#toolGrid {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 36vh, 12vh;
+    grid-template-rows: repeat(4, 12vh);
+    gap: 2vh;
+}
+
 #drawWindow {
     height: 75vh;
     width: 75vh;
@@ -114,5 +254,5 @@ body {
 }
 
 .gridBox:hover {
-    background-color: #202020;
+    background-color: #d8d6d6 !important;
 }

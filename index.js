@@ -1,12 +1,34 @@
 const minSize = 1;
 const maxSize = 100;
 const defaultSize = 16;
-const drawColor = "#202020";
 const emptyColor = "#ffffff";
+const colors = [
+    "#000000",
+    "#454545",
+    "#757575",
+    "#AAFF00",
+    "#FFFF00",
+    "#FF9500",
+    "#00FF15",
+    "#00FFFF",
+    "#0095FF",
+    "#FF0040",
+    "#FF00FF",
+    "#6A00FF"
+]
+
+let drawColor = colors[0];
+let mouseDown = false;
 
 const drawWindow = document.getElementById("drawWindow");
 const sizeInput = document.getElementById("sizeInput");
 const boxes = document.getElementsByClassName("gridBox");
+const colorButtons = document.getElementsByClassName("colorOption");
+
+function clearSelection() {
+    if (window.getSelection) {window.getSelection().removeAllRanges();}
+    else if (document.selection) {document.selection.empty();}
+}
 
 function getSizeInput() {
     let input = sizeInput.value;
@@ -59,7 +81,9 @@ function createGrid() {
 }
 
 function colorBox(box) {
-    box.style.backgroundColor = drawColor;
+    if(mouseDown) {
+        box.style.backgroundColor = drawColor;
+    }
 }
 
 function clearGrid() {
@@ -68,5 +92,71 @@ function clearGrid() {
     }
 }
 
+function changeColor(colorButton) {
+    document.getElementsByClassName("activeColor")[0].classList.remove("activeColor");
+    colorButton.classList.add("activeColor"); 
+
+    switch(colorButton.id) {
+        case "c1":
+            drawColor = colors[0];
+            break;
+        
+        case "c2":
+            drawColor = colors[1];
+            break;
+        
+        case "c3":
+            drawColor = colors[2];
+            break;
+
+        case "c4":
+            drawColor = colors[3];
+            break;
+
+        case "c5":
+            drawColor = colors[4];
+            break;
+        
+        case "c6":
+            drawColor = colors[5];
+            break;
+        
+        case "c7":
+            drawColor = colors[6];
+            break;
+            
+        case "c8":
+            drawColor = colors[7];
+            break;
+
+        case "c9":
+            drawColor = colors[8];
+            break;
+        
+        case "c10":
+            drawColor = colors[9];
+            break;
+        
+        case "c11":
+            drawColor = colors[10];
+            break;
+            
+        case "c12":
+            drawColor = colors[11];
+            break;
+
+        default:
+            console.log("Error selecting color");
+            break;
+    }
+}
+
+for(let colorNum = 0; colorNum < colorButtons.length; colorNum++) {
+    let button = colorButtons[colorNum];
+   button.addEventListener("click", function() {changeColor(button)});
+}
+
+document.addEventListener("mousedown", function() {mouseDown = true; clearSelection();})
+document.addEventListener("mouseup", function() {mouseDown = false})
 document.getElementById("generateButton").addEventListener("click", createGrid);
 document.getElementById("clearButton").addEventListener("click", clearGrid);
