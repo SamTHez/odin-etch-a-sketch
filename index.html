@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="index.css">
     <title>Etch-A-Sketch</title>
 </head>
@@ -23,6 +22,7 @@
     <!--Window for selecting the pen color-->
     <div id="colorSelection">
         <h1 id="colorHeading">Color Selection</h1>
+
         <div id="colorGrid">
             <button id="c1" class="colorOption activeColor"></button>
             <button id="c2" class="colorOption"></button>
@@ -41,15 +41,37 @@
 
     <!--Window that will contain the canvas for the etch-a-sketch-->
     <div id="drawWindow">
-        
+
     </div>
 
     <!--Tool Selection Window-->
     <div id="toolSelection">
         <h1 id="toolHeading">Tool Selection</h1>
+
+        <div id="toolGrid">
+            <h1 class="toolName">Eraser</h1>
+            <button id="eraserToggle" class="toolToggle"></button>
+
+            <h1 class="toolName">Rainbow Pen</h1>
+            <button id="rainbowPenToggle" class="toolToggle"></button>
+
+            <h1 class="toolName">Grid Lines</h1>
+            <button id="gridLinesToggle" class="toolToggle"></button>
+
+            <h1 class="toolName">Dark Canvas</h1>
+            <button id="darkCanvasToggle" class="toolToggle"></button>
+
+            <h1 class="toolName">Alternate Colors</h1>
+            <button id="alternateColorsToggle" class="toolToggle"></button>
+        </div>
     </div>
 
-    <!--Javascript import for page-->
+    <!--Footer for the site-->
+    <div id="footer">
+        <h1 id="footerText">Copyright © 2023 SamTHez</h1>
+    </div>
+
+    <!--Javascript import for page functionality-->
     <script src="index.js"></script>
 </body>
 </html>

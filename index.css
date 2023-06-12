@@ -9,7 +9,7 @@
     /*Colors for the color selection*/
     --c1: #000000;
     --c2: #454545;
-    --c3: #757575;
+    --c3: #FFFFFF;
     --c4: #AAFF00;
     --c5: #FFFF00;
     --c6: #FF9500;
@@ -24,7 +24,6 @@
 body {
     margin: 0;
     background-color: #3c3a4c;
-    
 }
 
 #headerBar {
@@ -32,6 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #f94555;
+    height: 15vh;
     width: 100%;
     margin: 0;
     top: 0;
@@ -40,9 +40,9 @@ body {
 #siteTitle {
     padding: 10px 40px;
     margin: 0;
-    width: 25%;
+    width: 25vw;
     font-family: "tungsten";
-    font-size: 50px;
+    font-size: 8vh;
     color: #3c3a4c;
 }
 
@@ -62,7 +62,7 @@ body {
     border-color: #3c3a4c;
     background-color: #f8acb2;
     font-family: "tungsten";
-    font-size: 30px;
+    font-size: 5vh;
     text-align: center;
     color: #3c3a4c;
 }
@@ -79,7 +79,7 @@ body {
     border-color: #3c3a4c;
     background-color: #f94555;
     font-family: "tungsten";
-    font-size: 30px;
+    font-size: 5vh;
     color: #3c3a4c;
 }
 
@@ -101,7 +101,7 @@ body {
     border-color: #3c3a4c;
     background-color: #f94555;
     font-family: "tungsten";
-    font-size: 30px;
+    font-size: 5vh;
     color: #3c3a4c;
 }
 
@@ -109,17 +109,15 @@ body {
     position: absolute;
     height: auto;
     width: 40vh;
-    margin: 20px auto;
-    top: 15%;
-    left: 3%;
+    left: 5%;
 }
 
 #colorHeading {
     background-color: #f94555;
     padding: 2vh 0;
-    border-radius: 10px;
+    border-radius: 2vh;
     font-family: "tungsten";
-    font-size: 30px;
+    font-size: 6vh;
     text-align: center;;
     color: #3c3a4c
 }
@@ -206,35 +204,65 @@ body {
     position: absolute;
     height: auto;
     width: 40vh;
-    margin: 20px auto;
     top: 15%;
-    right: 3%;
+    right: 5%;
 }
 
 #toolHeading {
     background-color: #f94555;
     padding: 2vh 0;
-    border-radius: 10px;
+    border-radius: 2vh;
     font-family: "tungsten";
-    font-size: 30px;
+    font-size: 6vh;
     text-align: center;;
     color: #3c3a4c
 }
 
 #toolGrid {
     position: absolute;
+    display: grid;
+    grid-template-columns: 28vh 8vh;
+    grid-template-rows: repeat(5, 8vh);
+    gap: 2vh;
     left: 50%;
     transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: 36vh, 12vh;
-    grid-template-rows: repeat(4, 12vh);
-    gap: 2vh;
+}
+
+.toolName {
+    margin: 0;
+    padding: 1.5vh;
+    background-color: #f94555;
+    border-radius: 3vh;
+    font-family: "tungsten";
+    font-size: 4.5vh;
+    text-align: center;
+    color: #3c3a4c;
+}
+
+.toolToggle {
+    border-style: solid;
+    width: auto;
+    border-radius: 3vh;
+    border-width: 1.5vh;
+    border-color: #f94555;
+}
+
+.toolToggle:hover {
+    border-width: 1vh;
+}
+
+.toolToggle:active {
+    border-width: 2vh;
+}
+
+.toolOn {
+    background-color: #000000;
 }
 
 #drawWindow {
-    height: 75vh;
-    width: 75vh;
-    margin: 20px auto;
+    height: 65vh;
+    width: 65vh;
+    margin: 4vh auto 2vh auto;
     border-style: solid;
     border-width: 8px 20px;
     border-color: #f94555;
@@ -251,8 +279,29 @@ body {
 .gridBox {
     flex: 1;
     background-color: #ffffff;
+    border-style: solid;
+    border-color: #d8d6d6;
+    border-width: 0px;
 }
 
 .gridBox:hover {
     background-color: #d8d6d6 !important;
+}
+
+#footer {
+    position: absolute;
+    height: 5vh;
+    width: 100%;
+    bottom: 0;
+    background-color: #f94555;
+}
+
+#footerText {
+    font-family: "tungsten";
+    margin: 0;
+    padding: .5vh;
+    font-size: 3vh;
+    font-weight: 200;
+    text-align: center;
+    color: #3c3a4c;
 }
